@@ -16,31 +16,7 @@ def appointment(request):
 
 
 def contact(request):
-    if request.method == "POST":
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            contact = form.save()
-
-            send_mail(
-                subject=f"New Contact Form: {contact.subject}",
-                message=f"""
-Name: {contact.name}
-Email: {contact.email}
-Phone: {contact.phone}
-
-Message:
-{contact.message}
-                """.strip(),
-                from_email="PrimeMed Contact Form <classicabbey08@gmail.com>",
-                recipient_list=["muleroabiodun705@gmail.com"],
-                fail_silently=False,
-            )
-
-            return redirect("contact_success")
-    else:
-        form = ContactForm()
-
-    return render(request, "contact.html", {"form": form})
+    return render(request, "contact.html")
 
 
 def contact_success(request):

@@ -90,80 +90,7 @@
             </div>
       </div>
 </section>
-<!--Header Upper-->
 
-
-<!--Main Header-->
-<nav class="navbar navbar-default">
-      <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                        aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                  </button>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                  <ul class="nav navbar-nav">
-                        <li class="active">
-                              <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                              <a href="about.html">About</a>
-                        </li>
-                        <li>
-                              <a href="service.html">Service</a>
-                        </li>
-                        <li>
-                              <a href="gallery.html">Gallery</a>
-                        </li>
-                        <li>
-                              <a href="team.html">Team</a>
-                        </li>
-                        <li>
-                              <a href="appointment.html">Appointment</a>
-                        </li>
-                        <li>
-                              <a href="blog.html">Blog</a>
-                        </li>
-                        <li>
-                              <a href="contact.html">Contact</a>
-                        </li>
-                        <!-- <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown
-                                    <span class="caret"></span>
-                              </a>
-                              <ul class="dropdown-menu">
-                                    <li>
-                                          <a href="#">Action</a>
-                                    </li>
-                                    <li>
-                                          <a href="#">Another action</a>
-                                    </li>
-                                    <li>
-                                          <a href="#">Something else here</a>
-                                    </li>
-                                    <li role="separator" class="divider"></li>
-                                    <li>
-                                          <a href="#">Separated link</a>
-                                    </li>
-                                    <li role="separator" class="divider"></li>
-                                    <li>
-                                          <a href="#">One more separated link</a>
-                                    </li>
-                              </ul>
-                        </li> -->
-                  </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-      </div>
-      <!-- /.container-fluid -->
-</nav>
-<!--End Main Header -->
 
 <!--Page Title-->
 <section class="page-title text-center" style="background-image:url(images/background/3.jpg);">
@@ -186,17 +113,17 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img src="images/services/service-one.jpg" class="responsive" alt="story">
+                <img src="{% static 'images/services/service-one.jpg' %}" class="responsive" alt="story">
             </div>
             <div class="col-md-6">
                 <div class="story-content">
                     <h2>Our Story</h2>
-                    <h5 class="tagline">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, minima."</h6>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus totam ducimus est vero, officiis, placeat optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aliquam nesciunt fugit optio illum aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque assumenda, est quam perferendis expedita autem?</p>
+                    <h5 class="tagline">“Your Health, Our Prime Priority.”</h6>
+                    <p>PrimeMed Hospital was created with a simple purpose: to provide reliable, compassionate, and modern healthcare to every patient. Built on trust and excellence, PrimeMed brings together skilled medical professionals and advanced technology to ensure the best possible care. Every day, we work to make patients feel safe, supported, and confident in their healing journey.</p>
                     <h6>Mission</h6>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam nihil dolorum beatae consequatur mollitia iure?</p>
+                    <p>To deliver high-quality, affordable, and compassionate healthcare through skilled professionals, modern medical technology, and a patient-centered approach that puts people first.</p>
                     <h6>Vision</h6>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda consectetur adipisci, voluptatum dolores nostrum omnis.</p>
+                    <p>To become a leading healthcare provider known for excellence, innovation, and a commitment to improving lives and building healthier communities.</p>
                 </div>
             </div>
         </div>
@@ -234,7 +161,7 @@
             </div>
             <div class="col-md-4 col-sm-6">
                 <div class="gallery-item">
-                    <img src="images/gallery/gallery-01.jpg" class="img-responsive" alt="gallery-image">
+                    <img src="{% static 'images/gallery/gallery-01.jpg' %}" class="img-responsive" alt="gallery-image">
                     <a data-fancybox="images" href="images/gallery/gallery-01.jpg"></a>
                     <h3>Facility 01</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
@@ -242,7 +169,7 @@
             </div>
             <div class="col-md-4 col-sm-6">
                 <div class="gallery-item">
-                    <img src="images/gallery/gallery-02.jpg" class="img-responsive" alt="gallery-image">
+                    <img src="{% static 'images/gallery/gallery-02.jpg' %}" class="img-responsive" alt="gallery-image">
                     <a data-fancybox="images" href="images/gallery/gallery-02.jpg"></a>
                     <h3>Facility 02</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
@@ -250,7 +177,7 @@
             </div>
             <div class="col-md-4 col-sm-6">
                 <div class="gallery-item">
-                    <img src="images/gallery/gallery-03.jpg" class="img-responsive" alt="gallery-image">
+                    <img src="{% static 'images/gallery/gallery-03.jpg' %}" class="img-responsive" alt="gallery-image">
                     <a data-fancybox="images" href="images/gallery/gallery-03.jpg"></a>
                     <h3>Facility 03</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
@@ -258,7 +185,7 @@
             </div>
             <div class="col-md-4 col-sm-6">
                 <div class="gallery-item">
-                    <img src="images/gallery/gallery-04.jpg" class="img-responsive" alt="gallery-image">
+                    <img src="{% static 'images/gallery/gallery-04.jpg' %}" class="img-responsive" alt="gallery-image">
                     <a data-fancybox="images" href="images/gallery/gallery-04.jpg"></a>
                     <h3>Facility 04</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
@@ -266,7 +193,7 @@
             </div>
             <div class="col-md-4 col-sm-6">
                 <div class="gallery-item">
-                    <img src="images/gallery/gallery-05.jpg" class="img-responsive" alt="gallery-image">
+                    <img src="{% static 'images/gallery/gallery-05.jpg' %}" class="img-responsive" alt="gallery-image">
                     <a data-fancybox="images" href="images/gallery/gallery-05.jpg"></a>
                     <h3>Facility 05</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
@@ -274,7 +201,7 @@
             </div>
             <div class="col-md-4 col-sm-6">
                 <div class="gallery-item">
-                    <img src="images/gallery/gallery-06.jpg" class="img-responsive" alt="gallery-image">
+                    <img src="{% static 'images/gallery/gallery-06.jpg' %}" class="img-responsive" alt="gallery-image">
                     <a data-fancybox="images" href="images/gallery/gallery-06.jpg"></a>
                     <h3>Facility 06</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
