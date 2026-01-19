@@ -615,367 +615,323 @@
 <!--End Service Section-->
 
 <!--team section-->
-<section class="team-section section">
-    <div class="container">
-        <div class="section-title text-center">
-            <h3>Our Expert
-                <span>Doctors</span>
-            </h3>
-            <p>Specialized Expertise</p>
-        </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="team-member">
-                    <img src="{% static 'images/team/doctor-2.jpg' %}" alt="doctor" class="img-responsive">
-                    <div class="contents text-center">
-                        <h4>Dr. Robert Barrethion</h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, aspernatur.</p>
-                        <a href="#" class="btn btn-main">read more</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="team-member">
-                    <img src="{% static 'images/team/doctor-lab-3.jpg' %}" alt="doctor" class="img-responsive">
-                    <div class="contents text-center">
-                        <h4>Dr. Marry Lou</h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, aspernatur.</p>
-                        <a href="#" class="btn btn-main">read more</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="team-member">
-                    <img src="{% static 'images/team/event-2.jpg' %}" alt="doctor" class="img-responsive">
-                    <div class="contents text-center">
-                        <h4>Dr. Sansa Stark</h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, aspernatur.</p>
-                        <a href="#" class="btn btn-main">read more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+{% for doctor in doctors %}
+<div class="col-md-4 col-sm-6 col-xs-12">
+  <div class="team-member">
+    <img src="{{ doctor.photo.url }}"
+         alt="{{ doctor.name }} - {{ doctor.specialization }}"
+         class="img-responsive">
+    <div class="contents text-center">
+      <h4>{{ doctor.name }}</h4>
+      <p>{{ doctor.bio }}</p>
+      <a href="{{ doctor.get_absolute_url }}" class="btn btn-main">Read More</a>
     </div>
-</section>
+  </div>
+</div>
+{% endfor %}
+
 <!--End team section-->
 
 <!--testimonial-section-->
-<section class="testimonial-section" style="background: url(images/testimonials/1.jpg);">
-    <div class="container">
-        <div class="section-title text-center">
-            <h3>What Our
-                <span>Patients Says</span>
-            </h3>
-        </div>
-        <div class="testimonial-carousel">
-            <!--Slide Item-->
-            <div class="slide-item">
-                <div class="inner-box text-center">
-                    <div class="image-box">
-                        <figure>
-                            <img src="{% static 'images/testimonials/1.png' %}" alt="">
-                        </figure>
-                    </div>
-                    <h6>Adam Rose</h6>
-                    <p>Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
-                </div>
-            </div>
-            <!--Slide Item-->
-            <div class="slide-item">
-                <div class="inner-box text-center">
-                    <div class="image-box">
-                        <figure>
-                            <img src="{% static 'images/testimonials/2.png' %}" alt="">
-                        </figure>
-                    </div>
-                    <h6>David Warner</h6>
-                    <p>Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
-                </div>
-            </div>
-            <!--Slide Item-->
-            <div class="slide-item">
-                <div class="inner-box text-center">
-                    <div class="image-box">
-                        <figure>
-                            <img src="{% static 'images/testimonials/3.png' %}" alt="">
-                        </figure>
-                    </div>
-                    <h6>Amy Adams</h6>
-                    <p>Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
-                </div>
-            </div>
-            <!--Slide Item-->
-            <div class="slide-item">
-                <div class="inner-box text-center">
-                    <div class="image-box">
-                        <figure>
-                            <img src="{% static 'images/testimonials/1.png' %}" alt="">
-                        </figure>
-                    </div>
-                    <h6>Adam Rose</h6>
-                    <p>Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
-                </div>
-            </div>
-            <!--Slide Item-->
-            <div class="slide-item">
-                <div class="inner-box text-center">
-                    <div class="image-box">
-                        <figure>
-                            <img src="{% static 'images/testimonials/2.png' %}" alt="">
-                        </figure>
-                    </div>
-                    <h6>David Warner</h6>
-                    <p>Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
-                </div>
-            </div>
-            <!--Slide Item-->
-            <div class="slide-item">
-                <div class="inner-box text-center">
-                    <div class="image-box">
-                        <figure>
-                            <img src="{% static 'images/testimonials/3.png' %}" alt="">
-                        </figure>
-                    </div>
-                    <h6>Amy Adams</h6>
-                    <p>Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
-                </div>
-            </div>
-            <!--Slide Item-->
-            <div class="slide-item">
-                <div class="inner-box text-center">
-                    <div class="image-box">
-                        <figure>
-                            <img src="{% static 'images/testimonials/1.png' %}" alt="">
-                        </figure>
-                    </div>
-                    <h6>Adam Rose</h6>
-                    <p>Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
-                </div>
-            </div>
-            <!--Slide Item-->
-            <div class="slide-item">
-                <div class="inner-box text-center">
-                    <div class="image-box">
-                        <figure>
-                            <img src="{% static 'images/testimonials/2.png' %}" alt="">
-                        </figure>
-                    </div>
-                    <h6>David Warner</h6>
-                    <p>Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
-                </div>
-            </div>
-            <!--Slide Item-->
-            <div class="slide-item">
-                <div class="inner-box text-center">
-                    <div class="image-box">
-                        <figure>
-                            <img src="{% static 'images/testimonials/3.png' %}" alt="">
-                        </figure>
-                    </div>
-                    <h6>Amy Adams</h6>
-                    <p>Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
-                </div>
-            </div>
-        </div>
+{% load static %}
+
+<section class="testimonial-section"
+  style="background-image: url('{% static 'images/testimonials/1.jpg' %}');">
+
+  <div class="container">
+    <div class="section-title text-center">
+      <h3>What Our <span>Patients Say</span></h3>
     </div>
+
+    <div class="testimonial-carousel">
+
+      <!-- Testimonial 1 -->
+      <div class="slide-item">
+        <div class="inner-box text-center">
+          <div class="image-box">
+            <figure>
+              <img src="{% static 'images/testimonials/1.png' %}" alt="Patient Adam Rose">
+            </figure>
+          </div>
+          <h6>Adam Rose</h6>
+          <p>
+            PrimeMed provided excellent care and attention. The doctors were
+            professional and made me feel safe throughout my treatment.
+          </p>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="slide-item">
+        <div class="inner-box text-center">
+          <div class="image-box">
+            <figure>
+              <img src="{% static 'images/testimonials/2.png' %}" alt="Patient David Warner">
+            </figure>
+          </div>
+          <h6>David Warner</h6>
+          <p>
+            From consultation to treatment, everything was smooth.
+            The staff were friendly and very supportive.
+          </p>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="slide-item">
+        <div class="inner-box text-center">
+          <div class="image-box">
+            <figure>
+              <img src="{% static 'images/testimonials/3.png' %}" alt="Patient Amy Adams">
+            </figure>
+          </div>
+          <h6>Amy Adams</h6>
+          <p>
+            I highly recommend PrimeMed. Their professionalism and care
+            exceeded my expectations.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
+
 <!--End testimonial-section-->
 
 <!-- Contact Section -->
-<section class="appoinment-section section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-sm-12 col-xs-12">
-                <div class="accordion-section">
-    <div class="section-title">
-        <h3>FAQ</h3>
-    </div>
-    <div class="accordion-holder">
-        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <div class="panel panel-default">
+<section class="appointment-section section">
+  <div class="container">
+    <div class="row">
+
+      <!-- FAQ -->
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="accordion-section">
+          <div class="section-title">
+            <h3>FAQ</h3>
+          </div>
+
+          <div class="accordion-holder">
+            <div class="panel-group" id="accordion" role="tablist">
+
+              <!-- FAQ 1 -->
+              <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingOne">
-                    <h4 class="panel-title">
-                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Why Should I choose Medical Health
-                        </a>
-                    </h4>
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse"
+                       data-parent="#accordion"
+                       href="#collapseOne"
+                       aria-expanded="true">
+                      Why should I choose PrimeMed?
+                    </a>
+                  </h4>
                 </div>
-                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                    <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                        non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
-                        helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
-                        vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
-                        heard of them accusamus labore sustainable VHS.
-                    </div>
+
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel">
+                  <div class="panel-body">
+                    PrimeMed offers professional healthcare services delivered
+                    by experienced medical personnel using modern equipment,
+                    ensuring patient safety and comfort.
+                  </div>
                 </div>
-            </div>
-            <div class="panel panel-default">
+              </div>
+
+              <!-- FAQ 2 -->
+              <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingTwo">
-                    <h4 class="panel-title">
-                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
-                            aria-controls="collapseTwo">
-                            What are the Centre’s visiting hours?
-                        </a>
-                    </h4>
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button"
+                       data-toggle="collapse"
+                       data-parent="#accordion"
+                       href="#collapseTwo"
+                       aria-expanded="false">
+                      What are the visiting hours?
+                    </a>
+                  </h4>
                 </div>
-                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                    <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                        non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
-                        helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
-                        vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
-                        heard of them accusamus labore sustainable VHS.
-                    </div>
+
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel">
+                  <div class="panel-body">
+                    Our visiting hours are from <strong>8:00 AM to 6:00 PM</strong>,
+                    Monday to Saturday. Emergency services are available 24/7.
+                  </div>
                 </div>
-            </div>
-            <div class="panel panel-default">
+              </div>
+
+              <!-- FAQ 3 -->
+              <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingThree">
-                    <h4 class="panel-title">
-                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"
-                            aria-controls="collapseThree">
-                            How many visitors are allowed?
-                        </a>
-                    </h4>
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button"
+                       data-toggle="collapse"
+                       data-parent="#accordion"
+                       href="#collapseThree"
+                       aria-expanded="false">
+                      How many visitors are allowed?
+                    </a>
+                  </h4>
                 </div>
-                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                    <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                        non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
-                        helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
-                        vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
-                        heard of them accusamus labore sustainable VHS.
-                    </div>
+
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel">
+                  <div class="panel-body">
+                    For patient comfort and safety, a maximum of
+                    <strong>two visitors</strong> are allowed per patient at a time.
+                  </div>
                 </div>
+              </div>
+
             </div>
+          </div>
         </div>
-    </div>
-</div>
-            </div>
-            <div class="col-md-6 col-sm-12 col-xs-12">
-                <div class="contact-area">
-    <div class="section-title">
-        <h3>Request
-            <span>Appointment</span>
-        </h3>
-    </div>
-    <form name="contact_form" class="default-form contact-form" action="sendmail.php" method="post">
-        <div class="row">
-            <div class="col-md-6 col-sm-12 col-xs-12">
+      </div>
+
+      <!-- APPOINTMENT FORM -->
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="contact-area">
+          <div class="section-title">
+            <h3>Request <span>Appointment</span></h3>
+          </div>
+
+          <form method="POST" class="default-form contact-form">
+            {% csrf_token %}
+
+            <div class="row">
+              <div class="col-md-6">
                 <div class="form-group">
-                    <input type="text" name="Name" placeholder="Name" required="">
+                  <input type="text" name="name" placeholder="Full Name" required>
                 </div>
+
                 <div class="form-group">
-                    <input type="email" name="Email" placeholder="Email" required="">
+                  <input type="email" name="email" placeholder="Email Address" required>
                 </div>
+
                 <div class="form-group">
-                    <select name="subject">
-                        <option>Departments</option>
-                        <option>Diagnostic</option>
-                        <option>Psychological</option>
-                    </select>
+                  <select name="department" required>
+                    <option value="">Select Department</option>
+                    <option value="diagnostic">Diagnostic</option>
+                    <option value="psychological">Psychological</option>
+                  </select>
                 </div>
-            </div>
-            <div class="col-md-6 col-sm-12 col-xs-12">
+              </div>
+
+              <div class="col-md-6">
                 <div class="form-group">
-                    <input type="text" name="Phone" placeholder="Phone" required="">
+                  <input type="text" name="phone" placeholder="Phone Number" required>
                 </div>
+
                 <div class="form-group">
-                    <input type="text" name="Date" placeholder="Date" required="" id="datepicker">
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                  <input type="date" name="appointment_date" required>
                 </div>
+
                 <div class="form-group">
-                    <select name="subject">
-                        <option>Doctor</option>
-                        <option>Diagnostic</option>
-                        <option>Psychological</option>
-                    </select>
+                  <select name="doctor" required>
+                    <option value="">Select Doctor</option>
+                    <option value="doctor_a">Doctor A</option>
+                    <option value="doctor_b">Doctor B</option>
+                  </select>
                 </div>
-            </div>
-            <div class="col-md-12 col-sm-12 col-xs-12">
+              </div>
+
+              <div class="col-md-12">
                 <div class="form-group">
-                    <textarea name="form_message" placeholder="Your Message" required=""></textarea>
+                  <textarea name="message" placeholder="Your Message" required></textarea>
                 </div>
+
                 <div class="form-group text-center">
-                    <button type="submit" class="btn-style-one">submit now</button>
+                  <button type="submit" class="btn-style-one">
+                    Submit Now
+                  </button>
                 </div>
+              </div>
             </div>
+
+          </form>
         </div>
-    </form>
-</div>                        
-            </div>
-        </div>                    
+      </div>
+
     </div>
+  </div>
 </section>
+
+
 <!-- End Contact Section -->
 
 <!--footer-main-->
+{% load static %}
+
+
 <footer class="footer-main">
   <div class="footer-top">
     <div class="container">
       <div class="row">
+
+        <!-- ABOUT -->
         <div class="col-md-4 col-sm-6 col-xs-12">
           <div class="about-widget">
             <div class="footer-logo">
               <figure>
-                <a href="index.html">
-                  <img src="{% static 'images/logo-2.png' %}" alt="">
+                <a href="{% url 'home' %}">
+                  <img src="{% static 'images/Prime logo.png' %}" alt="PrimeMed Logo">
                 </a>
               </figure>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, temporibus?</p>
+
+            <p>
+              PrimeMed is committed to providing quality healthcare services
+              with professionalism and compassion.
+            </p>
+
             <ul class="location-link">
               <li class="item">
                 <i class="fa fa-map-marker"></i>
                 <p>8, Paradise Estate, Lagos State, Nigeria</p>
               </li>
+
               <li class="item">
-                <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                <a href="#">
-                  <p>Support@PrimeMedMed.com</p>
+                <i class="fa fa-envelope-o"></i>
+                <a href="mailto:support@primemed.com">
+                  <p>support@primemed.com</p>
                 </a>
               </li>
+
               <li class="item">
-                <i class="fa fa-phone" aria-hidden="true"></i>
+                <i class="fa fa-phone"></i>
                 <p>+234 705 795 9432</p>
               </li>
             </ul>
+
             <ul class="list-inline social-icons">
               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
               <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
             </ul>
           </div>
         </div>
+
+        <!-- SERVICES -->
         <div class="col-md-4 col-sm-6 col-xs-12">
           <h6>Services</h6>
           <ul class="menu-link">
             <li>
-              <a href="#">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>Orthopadic Liabilities</a>
+              <a href="#"><i class="fa fa-angle-right"></i> Orthopedic Services</a>
             </li>
             <li>
-              <a href="#">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>Dental Clinic</a>
+              <a href="#"><i class="fa fa-angle-right"></i> Dental Clinic</a>
             </li>
             <li>
-              <a href="#">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>Dormamu Clinic</a>
+              <a href="#"><i class="fa fa-angle-right"></i> Dermatology Clinic</a>
             </li>
             <li>
-              <a href="#">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>Psycological Clinic</a>
+              <a href="#"><i class="fa fa-angle-right"></i> Psychological Clinic</a>
             </li>
             <li>
-              <a href="#">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>Gynaecological Clinic</a>
+              <a href="#"><i class="fa fa-angle-right"></i> Gynecological Clinic</a>
             </li>
           </ul>
         </div>
+
+        <!-- RECENT POSTS -->
         <div class="col-md-4 col-sm-6 col-xs-12">
           <div class="social-links">
             <h6>Recent Posts</h6>
@@ -984,57 +940,64 @@
                 <div class="media">
                   <div class="media-left">
                     <a href="#">
-                      <img class="media-object" src="images/blog/post-thumb-small.jpg" alt="post-thumb">
-                    </a>
-                  </div>
-                  <div class="media-body">
-                    <h4 class="media-heading"><a href="#">Post Title</a></h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem.</p>
-                  </div>
-                </div>
-              </li>
-              <li class="item">
-                <div class="media">
-                  <div class="media-left">
-                    <a href="#">
-                      <img class="media-object" src="images/blog/post-thumb-small.jpg" alt="post-thumb">
+                      <img class="media-object"
+                        src="{% static 'images/blog/post-thumb-small.jpg' %}"
+                        alt="Post thumbnail">
                     </a>
                   </div>
                   <div class="media-body">
                     <h4 class="media-heading">
-                      <a href="#">Post Title</a>
+                      <a href="#">Healthy Living Tips</a>
                     </h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem.</p>
+                    <p>Simple ways to maintain good health every day.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="item">
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object"
+                        src="{% static 'images/blog/post-thumb-small.jpg' %}"
+                        alt="Post thumbnail">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">
+                      <a href="#">Why Regular Checkups Matter</a>
+                    </h4>
+                    <p>Prevention is always better than cure.</p>
                   </div>
                 </div>
               </li>
             </ul>
           </div>
         </div>
+
       </div>
     </div>
   </div>
+
+  <!-- FOOTER BOTTOM -->
   <div class="footer-bottom">
     <div class="container clearfix">
       <div class="copyright-text">
-        <p>&copy; Copyright 2018. All Rights Reserved by
-          <a href="index.html">PrimeMed</a>
+        <p>
+          &copy; {% now "Y" %} PrimeMed. All Rights Reserved.
         </p>
       </div>
+
       <ul class="footer-bottom-link">
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="about.html">About</a>
-        </li>
-        <li>
-          <a href="contact.html">Contact</a>
-        </li>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
       </ul>
     </div>
   </div>
 </footer>
+
+
 <!--End footer-main-->
 
 </div>
